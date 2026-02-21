@@ -1,0 +1,9 @@
+djangorestframework
+djangorestframework-simplejwt
+dj-rest-auth
+gunicorn
+psycopg2-binary
+celery
+redis
+django-celery-results
+django-environ

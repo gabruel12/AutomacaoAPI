@@ -1,0 +1,15 @@
+FROM python3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONNUMBERBUFFERED=1
+
+WORKDIR /code
+
+COPY app/requirements.txt .
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+COPY app /code
+
+COPY docker /code/docker
+
+ENTRYPOINT ["sh", "/code/docker/entrypoint.sh"]
