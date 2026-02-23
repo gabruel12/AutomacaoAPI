@@ -36,7 +36,7 @@ jobs:
         run: pip install -r app/requirements.txt
 
       - name: Migrate
-        run: python app/manage.py migrate
+        run: python manage.py migrate
 
       - name: Test
         run: pytest
