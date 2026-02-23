@@ -13,7 +13,7 @@ def generate_verification_code(size=4):
 
 def create_user_with_verification(username, email, password):
     user = User.objects.create_user(
-        usernmae  = username,
+        username  = username,
         email     = email,
         password  = password,
         is_active = False
